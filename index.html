@@ -1,333 +1,148 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title><span class="lang" data-lang="de">Cardinal System – Rechtliches</span><span class="lang" data-lang="en" style="display:none;">Cardinal System – Legal</span></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardinal System - Startseite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: url('sword-art-online-mills-andrew-gilbert-ayano-keiko-kirigaya-kazuto-wallpaper-preview.jpg') no-repeat center center fixed;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('sword-art-online-mills-andrew-gilbert-ayano-keiko-kirigaya-kazuto-wallpaper-preview.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-shadow: 1px 1px 3px #000;
-      backdrop-filter: brightness(0.7);
+      color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
     }
-    .container {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      margin-top: 2rem;
-      border-radius: 12px;
-      max-width: 900px;
-      width: 90%;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    header {
       text-align: center;
+      padding: 10px;
     }
-    p, li {
-      font-size: 1.1rem;
-      line-height: 1.6;
+    header img.banner {
+      max-width: 100%;
+      height: auto;
     }
     nav {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+      margin: 10px 0;
     }
     nav a {
+      color: #f0f0f0;
       text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      background-color: #1f6feb;
-      color: white;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      margin: 0 15px;
+      font-weight: 600;
+      font-family: 'Orbitron', sans-serif;
     }
     nav a:hover {
-      background-color: #1158c7;
+      text-decoration: underline;
     }
-    .widget {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
+    nav a.active {
+      color: #00ffff;
+      text-decoration: underline;
     }
-    </style>
+    .container {
+      max-width: 1000px;
+      background: rgba(0,0,0,0.6);
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #00ffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      border-bottom: 1px solid #00ffff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    p, li {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    ul {
+      margin: 0 0 1.5em 1.5em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: monospace;
+      background: #222;
+      color: #00ffff;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    /* Responsive adjustments */
+    @media(max-width: 600px) {
+      nav {
+        display: block;
+        margin: 10px;
+      }
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<style>
-  .lang-switch {
-    text-align: center;
-    margin: 1rem 0;
-  }
-  .lang-switch button {
-    background-color: #1f6feb;
-    color: #fff;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    margin: 0 0.3rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s, transform 0.2s;
-  }
-  .lang-switch button.active {
-    background-color: #1558b0;
-    transform: scale(1.05);
-  }
-  .lang-switch button:hover {
-    background-color: #3e78dc;
-  }
-</style>
-
-<div class="lang-switch">
-  <button onclick="setLang('de')">🇩🇪 Deutsch</button>
-  <button onclick="setLang('en')">🇬🇧 English</button>
-</div>
-
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('.lang').forEach(el => {
-      el.style.display = el.dataset.lang === lang ? '' : 'none';
-    });
-    document.querySelectorAll('.lang-switch button').forEach(btn => {
-      btn.classList.toggle('active', btn.textContent.includes(lang === 'de' ? 'Deutsch' : 'English'));
-    });
-    localStorage.setItem('cardinal_lang', lang);
-  }
-  window.addEventListener('DOMContentLoaded', () => {
-    const lang = localStorage.getItem('cardinal_lang') || 'de';
-    setLang(lang);
-  });
-</script>
-
-
-  
-        
-
-<style>
-    text-align: right;
-    margin-bottom: 1rem;
-  }
-  .lang-switch button {
-    background-color: #1f6feb;
-    color: #fff;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    margin-left: 0.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s;
-  }
-  .lang-switch button:hover {
-    background-color: #1558b0;
-  }
-</style>
-
-<div class="lang-switch">
-  <button onclick="setLang('de')">🇩🇪 Deutsch</button>
-  <button onclick="setLang('en')">🇬🇧 English</button>
-</div>
-
-
-    document.querySelectorAll('.lang').forEach(el => {
-      el.style.display = el.dataset.lang === lang ? '' : 'none';
-    });
-    localStorage.setItem('cardinal_lang', lang);
-  }
-  window.addEventListener('DOMContentLoaded', () => {
-    const lang = localStorage.getItem('cardinal_lang') || 'de';
-    setLang(lang);
-  });
-
- style="text-align: right; margin-bottom: 1rem;">
-  <span onclick="switchLanguage('de')" style="cursor:pointer; margin-right: 10px;">🇩🇪 Deutsch</span>
-  <span onclick="switchLanguage('en')" style="cursor:pointer;">🇬🇧 English</span>
-</div>
-
-<script>
-  function switchLanguage(lang) {
-    alert("Die Sprachumschaltung ist aktuell noch in Vorbereitung. \nLanguage switching is coming soon!");
-    // Künftige Funktion: Inhalte dynamisch umschalten oder auf .en/.de Seiten weiterleiten
-  }
-
-
-<div class="container">
-        <div style="text-align:center; margin-bottom: 1.5rem;">
-            <img src="zhhighwayracer03.gif" alt="zhHighwayRacer03 Logo" style="max-width:200px; border-radius:12px;"><br>
-            <a href="https://linktr.ee/zhHighwayRacer03" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#1f6feb;font-size:1.1rem;text-decoration:none;">
-                🔗 Linktree: zhHighwayRacer03
-            </a>
-        </div>
-        
-    
-<h1><span class="lang" data-lang="de">Cardinal System – Rechtliches</span><span class="lang" data-lang="en" style="display:none;">Cardinal System – Legal</span></h1>
-<p><span class="lang" data-lang="de">Wähle ein Dokument aus:</span><br><br><span class="lang" data-lang="en" style="display:none;">Choose a document:</span></p>
-
-    
-<hr style="margin: 2rem 0; border-color: #444;">
-<h2 style="text-align:center;">ℹ️ <span class="lang" data-lang="de">Über Cardinal System</span><span class="lang" data-lang="en" style="display:none;">About Cardinal System</span></h2>
-<p>
-<b>Cardinal System</b> ist ein Discord-Bot entwickelt von <strong>zhHighwayRacer03</strong>, inspiriert vom <em>Cardinal-System</em> aus <strong>Sword Art Online</strong>.
-<span class="lang" data-lang="de">Der Bot bietet eine umfangreiche Sammlung an Funktionen zur Serververwaltung, darunter:</span><span class="lang" data-lang="en" style="display:none;">The bot offers a comprehensive set of server management features, including:</span>
-</p>
-<ul>
-  <li>🛡️ <span class="lang" data-lang="de">Moderation: Ban, Kick, Timeout, Verwarnungen mit Logging</span><span class="lang" data-lang="en" style="display:none;">Moderation: Ban, Kick, Timeout, warnings with logging</span></li>
-  <li>🎫 Ticketsystem mit eigenem Setup und Kanalsteuerung</li>
-  <li>🎵 Musikunterstützung über <code>I Love Music</code> (Stream API)</li>
-  <li>🛠️ <span class="lang" data-lang="de">Utility-Befehle: Rollen, Umfragen, Begrüßungen u.v.m.</span><span class="lang" data-lang="en" style="display:none;">Utility commands: roles, polls, welcomes, and more</span></li>
-  <li>🔧 Slash-Commands & rollenbasierte Berechtigungen</li>
-</ul>
-<p>
-Der Bot wird regelmäßig erweitert und gepflegt. Bei Fragen oder Feedback kannst du jederzeit dem Support-Discord beitreten (siehe Widget unten).
-</p>
-
-
-
-<hr style="margin: 2rem 0; border-color: #444;">
-
-<hr style="margin: 2rem 0; border-color: #444;">
-<h2 style="text-align:center;"><span class="lang" data-lang="de">👤 Über den Entwickler</span><span class="lang" data-lang="en" style="display:none;">👤 About the Developer</span></h2>
-<div class="about-toggle" onclick="toggleAbout()">🧩 <span class="lang" data-lang="de">Mehr über mich anzeigen</span><span class="lang" data-lang="en" style="display:none;">Show more about me</span></div>
-<div id="about-box" class="about-box hidden">
-  <p>
-    <strong>zhHighwayRacer03</strong> ist ein leidenschaftlicher Discord-Entwickler mit Liebe zu Anime, Community-Arbeit und funktionalem Bot-Design. Sein Projekt <strong>Cardinal System</strong> basiert auf dem mächtigen Cardinal-System aus Sword Art Online – kombiniert mit nützlichen Tools für moderne Server.
-  </p>
-  <ul>
-    <li>🌙 Aktiv als Admin & Mod – meist nachts online</li>
-    <li>🎮 Gamer, SAO-Fan und Technikbastler</li>
-    <li>💬 Feedback via <code>/feedback</code> ist jederzeit willkommen</li>
-    <li>🔗 Kontakt: <a href="https://linktr.ee/zhHighwayRacer03" target="_blank">Linktree</a></li>
-  </ul>
-</div>
-
-<style>
-  .about-toggle {
-    margin: 1rem auto;
-    padding: 0.5rem 1.2rem;
-    background-color: #4b2e83;
-    color: #fff;
-    width: fit-content;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-  }
-  .about-toggle:hover {
-    background-color: #6d3cc7;
-  }
-  .about-box {
-    background-color: rgba(0, 0, 0, 0.65);
-    border-left: 4px solid #1f6feb;
-    padding: 1rem 1.5rem;
-    margin-top: 1rem;
-    border-radius: 8px;
-    animation: fadeIn 0.4s ease-in-out;
-  }
-  .about-box.hidden {
-    display: none;
-  }
-  @keyframes fadeIn {
-    from {{ opacity: 0; transform: translateY(-10px); }}
-    to {{ opacity: 1; transform: translateY(0); }}
-  }
-</style>
-
-<script>
-  function toggleAbout() {
-    const box = document.getElementById('about-box');
-    box.classList.toggle('hidden');
-  }
-
-
-<hr style="margin: 2rem 0; border-color: #444;">
-<h2 style="text-align:center;">🎉 <span class="lang" data-lang="de">Fun Facts über mich</span><span class="lang" data-lang="en" style="display:none;">Fun Facts About Me</span></h2>
-<ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-  <li>⚔️ <strong>Lieblingswelt in SAO:</strong> Aincrad – „Je höher die Etage, desto größer die Herausforderung.“</li>
-  <li>🎧 <strong>Beste Coding-Musik:</strong> I Love Music Streams & <a href="https://open.spotify.com/playlist/6kmpj0PQNHtTrinQOssLAB?si=5f13fce39f0c48c3" target="_blank">meine Spotify-Playlist</a></li>
-  <li>🌙 <strong>Nachtaktiv:</strong> Am produktivsten zwischen 22:00 – 03:00 Uhr</li>
-  <li>🧙 <strong>Programmierstil:</strong> „Wenn’s funktioniert, wird’s verfeinert – wenn nicht, wird’s neugestartet.“ 😅</li>
-  <li>🛡️ <strong>Traum-Feature für Cardinal System:</strong> Viele Features!</li>
-  <li>🎮 <strong>Lieblingsspiel:</strong> Last of Us 1 & 2 / oder: „Wenn ich nicht codiere, zock ich!“</li>
-  <li>🪷 <strong>Lieblingsanime:</strong> Sword Art Online – <a href="https://myanimelist.net/animelist/zhHighwayRacer03?status=2&order=4&order2=0" target="_blank">Meine Anime-Liste auf MAL</a></li>
-  <li>📛 <strong><span class="lang" data-lang="de">Erstes Discord-Projekt</span><span class="lang" data-lang="en" style="display:none;">First Discord project</span>:</strong> Ein einfacher Bot, der nur "Hallo Welt" sagte – mittlerweile evolved zum System-Boss 😎</li>
-</ul>
-
-<hr style="margin: 2rem 0; border-color: #444;">
-<h2 style="text-align:center;">💡 <span class="lang" data-lang="de">Feedback & Weiterentwicklung</span><span class="lang" data-lang="en" style="display:none;">Feedback & Development</span></h2>
-<p>
-Cardinal System wird laufend erweitert – geplante Features sind unter anderem neue Module, Events, Themes und Mini-Games.<br>
-Du hast eigene Ideen oder Vorschläge? Nutze einfach den Slash-Befehl <code>/feedback</code> direkt auf deinem Server, um deine Meinung einzubringen.
-</p>
-
-<nav>
-      <a href="cardinal_tos.html"><span class="lang" data-lang="de">📄 Nutzungsbedingungen</span><span class="lang" data-lang="en" style="display:none;">📄 Terms of Service</span></a><a href="cardinal_privacy.html"><span class="lang" data-lang="de">🔐 Datenschutzerklärung</span><span class="lang" data-lang="en" style="display:none;">🔐 Privacy Policy</span></a>
+  <header>
+    <img src="zhhighwayracer03.gif" alt="zhHighwayRacer03 Logo" class="banner" />
+    <nav>
+      <a href="index.html" class="active">Startseite</a>
+      <a href="tos.html">Nutzungsbedingungen</a>
+      <a href="privacy.html">Datenschutzerklärung</a>
+      <a href="https://linktr.ee/zhHighwayRacer03" target="_blank" rel="noopener">Linktree</a>
     </nav>
-    <div class="widget">
-    <iframe src="https://discord.com/widget?id=614025983518834696&theme=dark"
-    width="350" height="500" allowtransparency="true" frameborder="0"
-    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </header>
+
+  <div class="container">
+    <h1>Cardinal System</h1>
+    <p>Willkommen beim <strong>Cardinal System</strong> – einem vielseitigen Discord-Bot, der deine Server-Erfahrung auf das nächste Level bringt. Inspiriert vom berühmten Kardinalsystem aus <em>Sword Art Online</em>, bietet dieser Bot eine Fülle von nützlichen Funktionen und Unterhaltungsmöglichkeiten für deine Community.</p>
+
+    <h2>Funktionen</h2>
+    <ul>
+      <li><strong>Moderation & Verwaltung:</strong> Automatisiere Moderationsaufgaben mit Befehlen zum Kick/Ban, automatischen Begrüßungen und mehr.</li>
+      <li><strong>Rollenverwaltung:</strong> Ermögliche die Selbstzuweisung von Rollen durch Dropdown-Menüs oder Reaktionen für eine einfache Community-Organisation.</li>
+      <li><strong>Spaß & Minispiele:</strong> Spiele unterhaltsame Games direkt im Chat, z.B. einen Hungerspiele-Simulator oder Schere-Stein-Papier.</li>
+      <li><strong>Anime & Unterhaltung:</strong> Lasse dir zufällige Anime-Fakten anzeigen oder erhalte niedliche Neko-Bilder auf Befehl.</li>
+      <li><strong>Musik & Sonstiges:</strong> Spiele Musik in Sprachkanälen, nutze Meme- und Spaßbefehle und profitiere von Leveling- und Wirtschaftssystemen für deine Mitglieder.</li>
+    </ul>
+
+    <h2>Über den Entwickler</h2>
+    <p><strong>zhHighwayRacer03</strong> ist ein begeisterter Entwickler und Anime-Fan, der Cardinal System ins Leben gerufen hat. Seine Leidenschaft für <em>Sword Art Online</em> spiegelt sich in jedem Detail dieses Bots wider. Neben der Bot-Entwicklung ist zhHighwayRacer03 auch auf anderen Plattformen aktiv – schau gerne auf seinem <a href="https://linktr.ee/zhHighwayRacer03" target="_blank" rel="noopener">Linktree</a> vorbei, um mehr zu erfahren.</p>
+
+    <h2>Fun Facts</h2>
+    <ul>
+      <li>Der Name <em>Cardinal System</em> stammt aus Sword Art Online – dort steuert das Kardinalsystem die gesamte Spielwelt im Hintergrund.</li>
+      <li>Der Bot enthält einige versteckte Easter-Eggs für neugierige Nutzer – kannst du sie finden?</li>
+      <li>Mit dem Befehl <code>/neko</code> erhältst du zufällige Neko-Bilder. Ein Muss für Anime-Fans!</li>
+      <li>zhHighwayRacer03 hat über 100 Stunden in die Entwicklung dieses Bots gesteckt, um ein tolles Erlebnis zu schaffen.</li>
+    </ul>
+
+    <h2>Community & Feedback</h2>
+    <p>Tritt unserem Discord-Server bei und werde Teil der Cardinal System Community! Hier kannst du Fragen stellen, Ideen teilen und dich mit anderen Nutzern austauschen. Wir freuen uns auch über dein Feedback – nutze einfach den Slash-Befehl <code>/feedback</code> auf Discord, um uns deine Meinung mitzuteilen.</p>
+
+    <div class="discord-widget">
+      <iframe src="https://discord.com/widget?id=614025983518834696&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
   </div>
-
-<script>
-  const scrollBtn = document.createElement("button");
-  scrollBtn.textContent = "⬆ Nach oben";
-  scrollBtn.style.position = "fixed";
-  scrollBtn.style.bottom = "30px";
-  scrollBtn.style.right = "30px";
-  scrollBtn.style.padding = "0.75rem 1.2rem";
-  scrollBtn.style.backgroundColor = "#1f6feb";
-  scrollBtn.style.color = "#fff";
-  scrollBtn.style.border = "none";
-  scrollBtn.style.borderRadius = "8px";
-  scrollBtn.style.cursor = "pointer";
-  scrollBtn.style.display = "none";
-  scrollBtn.style.zIndex = "1000";
-  scrollBtn.style.boxShadow = "0 0 10px rgba(0,0,0,0.4)";
-  scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  document.body.appendChild(scrollBtn);
-
-  window.onscroll = () => {
-    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  };
-
-
-
-<hr style="margin: 2rem 0; border-color: #444;">
-<h2 style="text-align:center;">🎮 Live auf Twitch</h2>
-<p style="text-align:center;">
-Du kannst mir auch live beim Entwickeln, Zocken oder Quatschen zusehen – direkt hier auf der Seite!
-</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-  <iframe
-    src="https://player.twitch.tv/?channel=zhhighwayracer03&parent=zhhighwayracer03.github.io"
-    frameborder="0"
-    allowfullscreen="true"
-    scrolling="no"
-    height="378"
-    width="620">
-  </iframe>
-  <iframe
-    src="https://www.twitch.tv/embed/zhhighwayracer03/chat?parent=zhhighwayracer03.github.io"
-    frameborder="0"
-    scrolling="no"
-    height="378"
-    width="350">
-  </iframe>
-</div>
-
 </body>
 </html>

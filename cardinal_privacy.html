@@ -1,179 +1,145 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title><span class="lang" data-lang="de">Datenschutzerklärung</span><span class="lang" data-lang="en" style="display:none;">Privacy Policy</span> – Cardinal System</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardinal System - Datenschutzerklärung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: url('wallpapersden.com_sword-art-online-aincrad-digital_1920x1080.jpg') no-repeat center center fixed;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('wallpapersden.com_sword-art-online-aincrad-digital_1920x1080.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-shadow: 1px 1px 3px #000;
-      backdrop-filter: brightness(0.7);
+      color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
     }
-    .container {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      margin-top: 2rem;
-      border-radius: 12px;
-      max-width: 900px;
-      width: 90%;
+    header { 
+      text-align: center; 
+      padding: 10px; 
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
+    header img.banner { 
+      max-width: 100%; 
+      height: auto; 
     }
-    p, li {
-      font-size: 1.1rem;
-      line-height: 1.6;
+    nav { 
+      margin: 10px 0; 
     }
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    nav a { 
+      color: #f0f0f0; 
+      text-decoration: none; 
+      margin: 0 15px; 
+      font-weight: 600; 
+      font-family: 'Orbitron', sans-serif; 
     }
-    nav a {
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      background-color: #1f6feb;
-      color: white;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+    nav a:hover { 
+      text-decoration: underline; 
     }
-    nav a:hover {
-      background-color: #1158c7;
+    nav a.active { 
+      color: #00ffff; 
+      text-decoration: underline; 
     }
-    .widget {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
+    .container { 
+      max-width: 800px; 
+      background: rgba(0,0,0,0.6); 
+      margin: 20px auto; 
+      padding: 20px; 
+      border: 1px solid #00ffff; 
+      border-radius: 10px; 
+      box-shadow: 0 0 10px #00ffff; 
     }
-    </style>
+    h1, h2 { 
+      font-family: 'Orbitron', sans-serif; 
+      color: #00ffff; 
+      text-shadow: 0 0 5px #00ffff; 
+    }
+    h1 { 
+      font-size: 2em; 
+      margin-bottom: 0.5em; 
+    }
+    h2 { 
+      font-size: 1.2em; 
+      margin-top: 1.2em; 
+      margin-bottom: 0.5em; 
+      border-bottom: 1px solid #00ffff; 
+      display: inline-block; 
+    }
+    p, li { 
+      font-size: 1em; 
+      line-height: 1.6; 
+    }
+    ul { 
+      margin: 0 0 1.5em 1.5em; 
+    }
+    li { 
+      margin-bottom: 1em; 
+    }
+    code { 
+      font-family: monospace; 
+      background: #222; 
+      color: #00ffff; 
+      padding: 2px 4px; 
+      border-radius: 4px; 
+    }
+    /* Responsive adjustments */
+    @media(max-width: 600px) {
+      nav { 
+        display: block; 
+        margin: 10px; 
+      }
+      nav a { 
+        display: block; 
+        margin: 5px 0; 
+      }
+      .container { 
+        margin: 10px; 
+        padding: 15px; 
+      }
+    }
+  </style>
 </head>
 <body>
-  
-        
-
-<style>
-    text-align: right;
-    margin-bottom: 1rem;
-  }
-  .lang-switch button {
-    background-color: #1f6feb;
-    color: #fff;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    margin-left: 0.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s;
-  }
-  .lang-switch button:hover {
-    background-color: #1558b0;
-  }
-</style>
-
-<div class="lang-switch">
-  <button onclick="setLang('de')">🇩🇪 Deutsch</button>
-  <button onclick="setLang('en')">🇬🇧 English</button>
-</div>
-
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('.lang').forEach(el => {
-      el.style.display = el.dataset.lang === lang ? '' : 'none';
-    });
-    localStorage.setItem('cardinal_lang', lang);
-  }
-  window.addEventListener('DOMContentLoaded', () => {
-    const lang = localStorage.getItem('cardinal_lang') || 'de';
-    setLang(lang);
-  });
-</script>
- style="text-align: right; margin-bottom: 1rem;">
-  <span onclick="switchLanguage('de')" style="cursor:pointer; margin-right: 10px;">🇩🇪 Deutsch</span>
-  <span onclick="switchLanguage('en')" style="cursor:pointer;">🇬🇧 English</span>
-</div>
-
-<script>
-  function switchLanguage(lang) {
-    alert("Die Sprachumschaltung ist aktuell noch in Vorbereitung. \nLanguage switching is coming soon!");
-    // Künftige Funktion: Inhalte dynamisch umschalten oder auf .en/.de Seiten weiterleiten
-  }
-
-
-<div class="container">
-        <div style="text-align:center; margin-bottom: 1.5rem;">
-            <img src="zhhighwayracer03.gif" alt="zhHighwayRacer03 Logo" style="max-width:200px; border-radius:12px;"><br>
-            <a href="https://linktr.ee/zhHighwayRacer03" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#1f6feb;font-size:1.1rem;text-decoration:none;">
-                🔗 Linktree: zhHighwayRacer03
-            </a>
-        </div>
-        
-    
-<h1><span class="lang" data-lang="de">Datenschutzerklärung</span><span class="lang" data-lang="en" style="display:none;">Privacy Policy</span></h1>
-<p><span class="lang" data-lang="de">Letzte Aktualisierung: 26. März 2025</span><span class="lang" data-lang="en" style="display:none;">Last updated: March 26, 2025</span></p>
-<p>Diese <span class="lang" data-lang="de">Datenschutzerklärung</span><span class="lang" data-lang="en" style="display:none;">Privacy Policy</span> informiert darüber, wie der Discord-Bot Cardinal System („der Bot“) <span class="lang" data-lang="de">personenbezogene und serverbezogene Daten verarbeitet und speichert.</span><span class="lang" data-lang="en" style="display:none;">processes and stores personal and server-related data.</span></p>
-<ol>
-  <li><strong><span class="lang" data-lang="de">Welche Daten werden gespeichert?</span><span class="lang" data-lang="en" style="display:none;">What data is stored?</span></strong><br>
-    <ul>
-      <li>Server-Konfigurationen (Server-ID, Name, Owner-ID, Rollen-/Channel-IDs usw.)</li>
-      <li>Verwarnungen mit User-ID, Mod-ID, Grund, Zeitstempel</li>
-      <li>Befehlsinfos und temporäre Musikdaten</li>
-    </ul>
-    <strong>Es werden keine Nachrichten, Medien, privaten Daten oder Tokens gespeichert.</strong>
-  </li>
-  <li><strong><span class="lang" data-lang="de">Speicherdauer</span><span class="lang" data-lang="en" style="display:none;">Data retention</span></strong><br>Daten bleiben erhalten, bis sie über Befehle wie /clear gelöscht oder der Bot entfernt wird.</li>
-  <li><strong><span class="lang" data-lang="de">Zugriff</span><span class="lang" data-lang="en" style="display:none;">Access</span></strong><br>Nur Bot-Administratoren, Moderatoren und Entwickler haben <span class="lang" data-lang="de">Zugriff</span><span class="lang" data-lang="en" style="display:none;">Access</span> auf die Daten. Alle Daten sind rollenbasiert geschützt.</li>
-  <li><strong><span class="lang" data-lang="de">Rechte</span><span class="lang" data-lang="en" style="display:none;">Your rights</span></strong><br>Du kannst jederzeit Auskunft oder Löschung deiner Daten anfordern über den Support-Discord.</li>
-</ol>
-
+  <header>
+    <img src="zhhighwayracer03.gif" alt="zhHighwayRacer03 Logo" class="banner" />
     <nav>
-      <a href="index.html">🏠 Home</a><a href="cardinal_tos.html">📄 Nutzungsbedingungen</a>
+      <a href="index.html">Startseite</a>
+      <a href="tos.html">Nutzungsbedingungen</a>
+      <a href="privacy.html" class="active">Datenschutzerklärung</a>
+      <a href="https://linktr.ee/zhHighwayRacer03" target="_blank" rel="noopener">Linktree</a>
     </nav>
-    <div class="widget">
-    <iframe src="https://discord.com/widget?id=614025983518834696&theme=dark"
-    width="350" height="500" allowtransparency="true" frameborder="0"
-    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
+  </header>
+
+  <div class="container">
+    <h1>Datenschutzerklärung</h1>
+    <p>Der Schutz deiner persönlichen Daten ist uns ein wichtiges Anliegen. Diese Datenschutzerklärung erläutert, welche Informationen der Discord-Bot <strong>Cardinal System</strong> während der Nutzung verarbeitet und wie wir mit diesen Daten umgehen.</p>
+
+    <h2>Verantwortliche Stelle</h2>
+    <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit dem Bot ist der Entwickler des Cardinal System (Alias <strong>zhHighwayRacer03</strong>). Bei Fragen zum Datenschutz kannst du dich über Discord an ihn wenden.</p>
+
+    <h2>Erhobene Daten</h2>
+    <ul>
+      <li><strong>Benutzerdaten:</strong> Der Bot speichert gegebenenfalls deine Discord-Benutzer-ID, deinen Benutzernamen und ggf. deinen Nickname, um Funktionen bereitzustellen, die eine Identifizierung des Nutzers erfordern (z.B. Punkte- oder Levelsystem).</li>
+      <li><strong>Server- und kanalbezogene Daten:</strong> Server-IDs und Kanal-IDs können gespeichert werden, falls der Bot serverbezogene Einstellungen oder Logs führt (z.B. welche Kanäle für bestimmte Funktionen vorgesehen sind).</li>
+      <li><strong>Befehls- und Nutzungsdaten:</strong> Eingaben, wie verwendete Befehle oder vom Bot ausgeführte Aktionen, können zu Protokollzwecken oder zur Verbesserung des Services temporär gespeichert werden. Beispielsweise kann der Bot Nutzungsstatistiken erfassen (etwa für ein Leveling-System oder Spielstatistiken in Minispielen).</li>
+      <li><strong>Feedback-Inhalte:</strong> Wenn du den Befehl <code>/feedback</code> nutzt, wird die von dir eingegebene Nachricht erfasst, damit wir auf dein Feedback reagieren und den Service verbessern können.</li>
+    </ul>
+
+    <h2>Verwendung der Daten</h2>
+    <p>Die erhobenen Daten werden ausschließlich dazu verwendet, die Funktionen des Cardinal System Bots bereitzustellen und zu verbessern. Beispielsweise werden Benutzerdaten genutzt, um persönliche Statistiken zu speichern oder um Befehle dem richtigen Nutzer zuzuordnen. Befehls- und Nutzungsdaten helfen uns, den Bot zu optimieren und Fehler zu beheben. Es erfolgt keine Nutzung der Daten für Werbezwecke oder Profiling.</p>
+
+    <h2>Speicherung und Löschung</h2>
+    <p>Personenbezogene Daten werden nur so lange gespeichert, wie es für die Erfüllung der genannten Zwecke erforderlich ist. Statistische Daten (z.B. Level, Punkte) verbleiben gespeichert, bis sie durch einen Server-Administrator zurückgesetzt oder gelöscht werden, oder du einen Löschungswunsch äußerst. Feedback-Nachrichten werden nach Bearbeitung gelöscht oder anonymisiert. Auf Anfrage werden wir deine personenbezogenen Daten vollständig löschen, soweit dies technisch möglich ist und keine rechtlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+    <h2>Weitergabe an Dritte</h2>
+    <p>Es werden keine personenbezogenen Daten, die der Bot erhebt, an Dritte weitergegeben. Alle Daten verbleiben bei dem Bot-Entwickler und auf den Servern, die für den Bot-Betrieb genutzt werden. Bitte beachte jedoch, dass der Bot auf der Plattform Discord betrieben wird und somit auch den <a href="https://discord.com/privacy" target="_blank" rel="noopener">Datenschutzbestimmungen von Discord</a> unterliegt. Diese Website bindet zudem ein Discord-Widget ein, durch dessen Nutzung eventuell Daten (wie deine IP-Adresse) an Discord übertragen werden können.</p>
+
+    <h2>Deine Rechte</h2>
+    <p>Du hast das Recht, Auskunft über die zu deiner Person gespeicherten Daten zu erhalten sowie bei Unrichtigkeiten eine Berichtigung zu verlangen. Du kannst zudem die Löschung deiner Daten oder Einschränkung der Verarbeitung fordern, soweit dem keine gesetzlichen Pflichten entgegenstehen. Bitte wende dich hierzu an den Entwickler.</p>
+
+    <h2>Änderungen dieser Datenschutzerklärung</h2>
+    <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen am Bot oder an den rechtlichen Anforderungen Rechnung zu tragen. Wesentliche Änderungen werden auf dieser Website bekannt gegeben. Durch die weitere Nutzung des Bots nach Inkrafttreten der Änderungen stimmst du der aktualisierten Datenschutzerklärung zu.</p>
+
+    <p><em>Stand dieser Datenschutzerklärung: März 2025.</em></p>
   </div>
-
-<script>
-  const scrollBtn = document.createElement("button");
-  scrollBtn.textContent = "⬆ Nach oben";
-  scrollBtn.style.position = "fixed";
-  scrollBtn.style.bottom = "30px";
-  scrollBtn.style.right = "30px";
-  scrollBtn.style.padding = "0.75rem 1.2rem";
-  scrollBtn.style.backgroundColor = "#1f6feb";
-  scrollBtn.style.color = "#fff";
-  scrollBtn.style.border = "none";
-  scrollBtn.style.borderRadius = "8px";
-  scrollBtn.style.cursor = "pointer";
-  scrollBtn.style.display = "none";
-  scrollBtn.style.zIndex = "1000";
-  scrollBtn.style.boxShadow = "0 0 10px rgba(0,0,0,0.4)";
-  scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  document.body.appendChild(scrollBtn);
-
-  window.onscroll = () => {
-    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  };
-
-
 </body>
 </html>
